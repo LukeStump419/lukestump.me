@@ -36,8 +36,9 @@
 
     .banner-pic {
       width: 100%;
-      height: 200px;
+      max-height: 300px;
       object-fit: cover;
+      object-position: center;
       filter: grayscale(100%);
     }
 
@@ -115,7 +116,7 @@
     /* Mobile Responsive Adjustments */
     @media (max-width: 768px) {
       .banner-pic {
-        height: 140px;
+        max-height: 180px;
       }
 
       .profile-content h1 {
@@ -141,7 +142,7 @@
 </head>
 <body>
   <header>
-    <img src="/assets/images/profile.jpg" alt="Photo of Luke Stump" class="banner-pic">
+    <img src="/assets/images/banner_photo.jpeg" alt="Banner photo for Luke Stump" class="banner-pic">
     <div class="profile-content">
       <h1>Luke Stump</h1>
       <p>Data Analyst & Problem Solver</p>
@@ -165,4 +166,17 @@
     <ul>
       <li>Developed a Natural Language Processing model to match DoD project proposals to existing funding initiatives.</li>
       <li>Built a dynamic log monitoring tool using Bash and tmux for real-time alerting.</li>
-      <li>Created automation scripts
+      <li>Created automation scripts for stress testing web applications via synthetic data injection.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Resume</h2>
+    <p><a href="/assets/resume/Luke_Stump_Resume.pdf" download>📄 Download My Resume</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Luke Stump. All rights reserved.
+  </footer>
+</body>
+</html>
