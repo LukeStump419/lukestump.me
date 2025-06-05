@@ -30,21 +30,24 @@
 
     header {
       width: 100%;
+      height: 300px;
       position: relative;
-      margin-bottom: 2rem;
-    }
-
-    .banner-pic {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      object-position: center;
-      filter: grayscale(100%);
+      background-image: linear-gradient(rgba(84, 87, 117, 0.6), rgba(84, 87, 117, 0.6)), url('/assets/images/banner_photo.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
     }
 
     .profile-content {
       text-align: center;
       padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      max-width: 90%;
+      margin-bottom: 1rem;
     }
 
     .profile-content h1 {
@@ -115,8 +118,9 @@
 
     /* Mobile Responsive Adjustments */
     @media (max-width: 768px) {
-      .banner-pic {
-        max-height: 180px;
+      header {
+        height: 200px;
+        background-position: center top;
       }
 
       .profile-content h1 {
@@ -142,7 +146,6 @@
 </head>
 <body>
   <header>
-    <img src="/assets/images/banner_photo.jpeg" alt="Banner photo for Luke Stump" class="banner-pic">
     <div class="profile-content">
       <h1>Luke Stump</h1>
       <p>Data Analyst & Problem Solver</p>
@@ -164,9 +167,9 @@
   <section class="section">
     <h2>Projects & Work</h2>
     <ul>
-      <li>Developed a Natural Language Processing model to match DoD project proposals to existing funding initiatives.</li>
-      <li>Built a dynamic log monitoring tool using Bash and tmux for real-time alerting.</li>
-      <li>Created automation scripts for stress testing web applications via synthetic data injection.</li>
+      <li>Designed and implemented an NLP model that matches Department of Defense proposals to relevant funding opportunities, improving evaluation accuracy and turnaround time.</li>
+      <li>Developed a real-time log monitoring utility using Bash and tmux, enabling instant alerts for keyword-triggered system events during testing and deployment.</li>
+      <li>Created automated test data generation scripts to stress test web applications, simulating user interaction through structured JSON injection workflows.</li>
     </ul>
   </section>
 
