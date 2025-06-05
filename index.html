@@ -1,147 +1,30 @@
-:root {
-    --gray-bg: #DBDBDB;
-    --main-bg: #bfc8ad;
-    --dun: #DBCFB0;
-    --ash-gray: #BFC8AD;
-    --cambridge-blue: #90B494;
-    --slate-gray: #718F94;
-    --ultra-violet: #545775;
-    --overlay-black: rgba(0, 0, 0, 0.55);
-    --text-main: #333;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luke Stump | Data Scientist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- TOP NAVBAR -->
+    <nav class="topbar">
+        <span class="topbar-title">Luke Stump – Data Scientist | Data Analyst | Problem Solver</span>
+    </nav>
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', 'Arial', sans-serif;
-    background-color: #DBDBDB; /* 85% gray approximation */
-    color: var(--text-main);
-}
+    <!-- BANNER SECTION -->
+    <header class="banner">
+        <img src="assets/images/banner_photo.jpeg" alt="Luke Stump" class="banner-photo">
+        <div class="banner-overlay"></div>
+        <div class="banner-text">
+            <h1>Luke Stump</h1>
+            <h2>Data Analyst & Problem Solver</h2>
+            <p>30 Years of Diverse Experience in the Data Field</p>
+            <a href="assets/resume/Luke_Stump_Resume.pdf" download class="resume-btn">Download Resume</a>
+        </div>
+    </header>
 
-/* Top bar */
-.topbar {
-    width: 100vw;
-    background: var(--slate-gray);
-    color: var(--dun);
-    font-size: 1.1rem;
-    padding: 0.6rem 1.5rem;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    min-height: 44px;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-}
-
-.topbar-title {
-    flex: 1;
-}
-
-/* Banner section */
-.banner {
-    position: relative;
-    width: 100vw;
-    height: 320px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    overflow: hidden;
-    margin-bottom: 2.5rem;
-}
-
-.banner-photo {
-    width: 100vw;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    z-index: 1;
-    position: absolute;
-    top: 0; left: 0;
-}
-
-.banner-overlay {
-    background: var(--overlay-black);
-    width: 100vw;
-    height: 100%;
-    position: absolute;
-    top: 0; left: 0;
-    z-index: 2;
-}
-
-.banner-text {
-    position: absolute;
-    right: 8vw;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 3;
-    text-align: right;
-    color: var(--dun);
-    max-width: 410px;
-}
-
-.banner-text h1 {
-    margin: 0 0 0.2em 0;
-    font-size: 2.5em;
-    color: var(--ash-gray);
-    text-shadow: 0 2px 6px #111a;
-}
-
-.banner-text h2 {
-    margin: 0 0 0.25em 0;
-    font-weight: 400;
-    color: var(--cambridge-blue);
-    font-size: 1.45em;
-    letter-spacing: 0.01em;
-}
-
-.banner-text p {
-    font-size: 1.13em;
-    margin: 0 0 1.2em 0;
-    color: var(--dun);
-    text-shadow: 0 2px 8px #111a;
-}
-
-.resume-btn {
-    padding: 0.7em 2.1em;
-    background: var(--cambridge-blue);
-    color: var(--ultra-violet);
-    border: none;
-    border-radius: 2em;
-    font-size: 1em;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 2px 8px #1115;
-    transition: background 0.2s, color 0.2s;
-    cursor: pointer;
-}
-
-.resume-btn:hover {
-    background: var(--ultra-violet);
-    color: var(--cambridge-blue);
-}
-
-@media (max-width: 900px) {
-    .banner-text {
-        right: 5vw;
-        max-width: 70vw;
-        font-size: 0.93em;
-    }
-    .banner {
-        height: 220px;
-    }
-}
-
-@media (max-width: 600px) {
-    .banner {
-        height: 180px;
-    }
-    .banner-text {
-        right: 2vw;
-        max-width: 90vw;
-        font-size: 0.8em;
-    }
-    .banner-text h1 {
-        font-size: 1.3em;
-    }
-}
+    <!-- We'll continue here later! -->
+    <script src="script.js"></script>
+</body>
+</html>
