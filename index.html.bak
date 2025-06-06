@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luke Stump | Data Scientist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- TOP NAVBAR -->
+    <nav class="topbar">
+        <span class="topbar-title">Luke Stump – Data Wiz | Intel Pro | Problem Solver</span>
+    </nav>
+
+    <!-- BANNER SECTION -->
+    <header class="banner">
+        <img src="assets/images/banner_photo.jpeg" alt="Luke Stump" class="banner-photo">
+        <div class="banner-overlay"></div>
+        <div class="banner-text">
+            <h1>Luke Stump</h1>
+            <h2>Data Analyst & Problem Solver</h2>
+            <p>30 Years of Diverse Experience in the Data Field</p>
+            <a href="assets/resume/Luke_Stump_Resume.pdf" download class="resume-btn">Download Resume</a>
+        </div>
+    </header>
+
+<!-- ABOUT ME SECTION (Complex Shape) -->
+<section class="about-me-section">
+    <div class="about-me-heading">ABOUT ME</div>
+    <div class="about-me-bar">
+        <div class="about-me-content">
+        <p>
+            I’m Luke—a Data/Intel Analyst and perpetual problem solver with over two decades of hands-on experience in the data field. My professional journey has taken me from military intelligence and defense contracting to advanced analytics for private sector clients. I genuinely enjoy staring at data until patterns and trend lines begin to emerge, turning raw information into real insights. (I keep a deep supply of Visine handy for when all that intense staring dries out my eyeballs.)
+        </p>
+        <p>
+            I specialize in the overlap of data engineering, analytics, and decision-making. I’ve tackled everything from SQL databases and Python automation to complex statistical models, and I’m always eager to get my hands on raw, real-world data. To me, great analysis isn’t just about algorithms—it’s about telling a clear story that leads to action.
+        </p>
+        <p>
+            Outside of work, you’ll usually find me reading up on the latest in data science, hiking National Parks with my wife and kid, or logging plenty of miles on the road—hoping that in my later years, I’ll still be able to move around as much as I do now. If you’d like to talk data, collaborate, or just swap a good story, let’s connect!
+        </p>
+    </div>
+</section>
+</body>
+</html>
