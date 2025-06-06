@@ -185,13 +185,13 @@ body {
     top: 170%;                        /* Place tooltip *below* grown badge */
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(255, 217, 0, 0.676); /* Golden, with a bit of transparency */
+    background: rgba(255, 217, 0, 0.89); /* Golden, with a bit of transparency */
     color: #473700;
     font-size: 1em;
     padding: 0.48rem 0.7rem;
-    border-radius: 8px;
-    max-width: 750px;                 /* Wraps at this width */
-    min-width: 90px;
+    border-radius: 4px;
+    max-width: 1000px;                 /* Wraps at this width */
+    min-width: 120px;
     width: auto;                      /* Fit content */
     box-shadow: 0 2px 16px #ffd70080, 0 0 0 2px #eac80d88;
     opacity: 0;                       /* Hidden by default */
