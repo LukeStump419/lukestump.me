@@ -1,106 +1,103 @@
 /* ========================== COLOR VARIABLES ========================== */
-/* Earth-toned, outdoors-inspired palette. Edit these to shift whole theme colors. */
+/* Main palette: earth-toned, outdoors-inspired */
 :root {
-    --gray15: #242424;           /* 15% gray - dark background for entire page */
-    --sand: #FDF7E7;             /* pale sand - main bar, highlights, badge banner */
-    --forest: #6EA07D;           /* forest green - for sections/buttons */
-    --moss: #e5e194;             /* mossy gold - accent, nav text */
-    --earth: #7F6B48;            /* earth brown - heading/border accent */
-    --bark: #3e321c;             /* bark/dark brown - nav bar, overlays */
-    --pine: #122221;             /* deep pine - strongest accent/dark text */
-    --overlay-black: rgba(18,34,33,0.55); /* dark overlay for banner image */
-    --text-main: #222;           /* main text color, deep brown */
+    --gray15: #242424;           /* 15% gray - background */
+    --sand: #FDF7E7;             /* pale sand - main bar and highlights */
+    --forest: #6EA07D;           /* forest green - section background, button */
+    --moss: #e5e194;             /* mossy gold - accent, highlight */
+    --earth: #7F6B48;            /* earth brown - accent, heading, border */
+    --bark: #3e321c;             /* bark/dark brown - nav bar, overlay */
+    --pine: #122221;             /* deep forest/pine - for strong contrast */
+    --overlay-black: rgba(18,34,33,0.55); /* overlay for banner image */
+    --text-main: #222;           /* dark brown text */
 }
 
 /* ============================ BODY ============================= */
-/* Basic page styling */
 body {
-    margin: 0;                          /* No browser default margin */
-    padding: 0;                         /* No browser default padding */
-    font-family: 'Raleway', sans-serif; /* Clean, modern font for whole site */
-    background: var(--gray15);          /* Dark background */
-    color: var(--text-main);            /* Deep brown for all text */
+    margin: 0;                          /* Remove default browser margin */
+    padding: 0;                         /* Remove default browser padding */
+    font-family: 'Raleway', sans-serif; /* Use my custom font */
+    background: var(--gray15);          /* Set the whole page to 15% gray */
+    color: var(--text-main);            /* Use my main text color */
 }
 
 /* ============================ TOP NAV BAR ============================= */
-/* Sticky top nav bar, always visible at top. Edit background/color here. */
 .topbar {
-    width: 100vw;                        /* Stretch bar to full width of viewport */
-    background: var(--gray15);           /* Dark nav bar */
-    color: var(--moss);                  /* Mossy gold nav text */
-    font-size: 1.1rem;                   /* Nav bar font size */
-    padding: 0.6rem 1.5rem;              /* Padding for nav content */
-    box-sizing: border-box;              /* Padding included in width */
-    display: flex;                       /* Flex for layout */
+    width: 100vw;                        /* Bar spans entire screen width */
+    background: var(--gray15);           /* Use my dark gray background */
+    color: var(--moss);                  /* Text in mossy gold */
+    font-size: 1.1rem;                   /* Nav text size */
+    padding: 0.6rem 1.5rem;              /* Space inside bar: .6rem top/bottom, 1.5rem left/right */
+    box-sizing: border-box;              /* Include padding in total width */
+    display: flex;                       /* Use flexbox for layout */
     align-items: center;                 /* Vertically center nav content */
-    min-height: 24px;                    /* Minimum height of nav bar */
+    min-height: 24px;                    /* Set minimum height for nav */
     font-weight: 300;                    /* Lighter font for nav */
-    letter-spacing: 0.03em;              /* Spacing between letters for readability */
-    position: sticky;                    /* Sticky: nav stays up top when scrolling */
-    top: 0;                              /* Stick to top */
+    letter-spacing: 0.03em;              /* Slight space between nav letters */
+    position: sticky;                    /* Keep nav at top when scrolling */
+    top: 0;                              /* Stick to very top */
     left: 0;                             /* Stick to left edge */
-    z-index: 1000;                       /* Stay above all other content */
+    z-index: 1000;                       /* Stay above other elements */
 }
 
 .topbar-title {
-    flex: 1;                             /* Fill remaining space with title text */
+    flex: 1;                             /* Fill remaining space in nav with the title */
 }
 
 /* ============================ BANNER SECTION =========================== */
-/* The hero image/banner at the top of the page. */
 .banner {
-    position: relative;                  /* Allow overlay and text to position inside */
+    position: relative;                  /* So overlay and text position absolutely inside */
     width: 100vw;                        /* Full screen width */
-    height: 320px;                       /* Tall for desktop */
+    height: 320px;                       /* Banner height (desktop) */
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    overflow: hidden;                    /* Don't let content overflow out of banner */
-    margin-bottom: 2.5rem;               /* Space under banner */
+    overflow: hidden;                    /* Prevent overflow beyond banner */
+    margin-bottom: 2.5rem;               /* Space below banner */
 }
 
 .banner-photo {
-    width: 100vw;                        /* Cover entire banner width */
-    height: 100%;                        /* Cover full banner height */
-    object-fit: cover;                   /* Scale/crop photo to fit */
-    object-position: center;             /* Keep center of image in frame */
+    width: 100vw;                        /* Banner image covers entire width */
+    height: 100%;                        /* And all of banner height */
+    object-fit: cover;                   /* Make sure the image fills area without squishing */
+    object-position: center;             /* Center image in frame */
     display: block;
-    z-index: 1;                          /* Under overlay/text */
+    z-index: 1;                          /* Put image behind overlay/text */
     position: absolute;
     top: 0; left: 0;
 }
 
 .banner-overlay {
-    background: var(--overlay-black);    /* Semi-transparent overlay for readability */
+    background: var(--overlay-black);    /* Use my dark overlay color */
     width: 100vw;
     height: 100%;
     position: absolute;
     top: 0; left: 0;
-    z-index: 2;                          /* Above image, below text */
+    z-index: 2;                          /* Put overlay above image, but below text */
 }
 
 .banner-text {
-    position: absolute;                  /* Sit on top of banner */
-    right: 8vw;                          /* Distance from right side */
-    top: 50%;                            /* Vertically center */
-    transform: translateY(-50%);         /* True center */
-    z-index: 3;                          /* Always above overlay */
-    text-align: right;                   /* Right-align text */
-    color: var(--moss);                  /* Moss color for main banner text */
-    max-width: 410px;                    /* Limit max text width for good look */
+    position: absolute;                  /* Position text over banner */
+    right: 8vw;                          /* 8vw from right side */
+    top: 50%;                            /* Vertically centered */
+    transform: translateY(-50%);         /* Move up by half its height */
+    z-index: 3;                          /* Always above overlay/image */
+    text-align: right;                   /* Right-align text for banner */
+    color: var(--moss);                  /* Use moss color for main text */
+    max-width: 410px;                    /* Don't let text area get too wide */
 }
 
 .banner-text h1 {
     margin: 0 0 0.2em 0;
-    font-size: 2.5em;                    /* Big name text */
-    color: var(--sand);                  /* Name in sand color */
-    text-shadow: 0 2px 6px #111a;        /* Subtle shadow, improves contrast */
+    font-size: 2.5em;
+    color: var(--sand);                  /* Pale sand for name */
+    text-shadow: 0 2px 6px #111a;        /* Subtle shadow for readability */
 }
 
 .banner-text h2 {
     margin: 0 0 0.25em 0;
     font-weight: 400;
-    color: var(--forest);                /* Subheading in forest green */
+    color: var(--forest);                /* Forest green for subheading */
     font-size: 1.45em;
     letter-spacing: 0.01em;
 }
@@ -108,16 +105,16 @@ body {
 .banner-text p {
     font-size: 1.13em;
     margin: 0 0 1.2em 0;
-    color: var(--moss);                  /* Experience text in moss */
+    color: var(--moss);                  /* Use moss for experience text */
     text-shadow: 0 2px 8px #111a;
 }
 
 .resume-btn {
-    padding: 0.7em 2.1em;                /* Button size */
-    background: var(--forest);           /* Forest green for button */
-    color: var(--pine);                  /* Dark pine text */
+    padding: 0.7em 2.1em;                /* Button padding */
+    background: var(--forest);           /* Forest green button */
+    color: var(--pine);                  /* Deep pine text on button */
     border: none;
-    border-radius: 2em;                  /* Rounded, pill-shaped button */
+    border-radius: 2em;                  /* Rounded button */
     font-size: 1em;
     font-weight: bold;
     text-decoration: none;
@@ -127,153 +124,182 @@ body {
 }
 
 .resume-btn:hover {
-    background: var(--pine);             /* Invert colors for hover effect */
+    background: var(--pine);             /* Invert on hover */
     color: var(--forest);
 }
 
-/* ========== BADGE BANNER SECTION ========== */
-/* Row of badges with tooltips, centered and spaced. */
+/* ====================== BADGE EXPLAINER BANNER ===================== */
+/* Black bar above badges for badge write-ups */
+.badge-explainer-banner {
+    width: 100vw;
+    min-height: 2.2rem;
+    background: #161616;            /* nearly black */
+    color: #ffe14c;                 /* warm yellow for text */
+    font-size: 1.15rem;
+    letter-spacing: 0.02em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    border-bottom: 2px solid #333;
+    transition: background 0.2s, color 0.2s;
+    min-height: 2.4rem;
+}
+
+/* ====================== BADGE BANNER SECTION ===================== */
 .badge-banner-section {
-    width: 100vw;                     /* Full width for badge banner */
+    width: 100vw;
     display: flex;
     justify-content: center;
-    background: var(--sand);          /* Sand color for badge area */
-    padding: 1.2rem 0;                /* Top/bottom spacing for badge row */
+    background: var(--sand);
+    padding: 1.2rem 0;
     box-sizing: border-box;
-    margin-bottom: 2rem;              /* Space under badge banner */
+    margin-bottom: 2rem;
 }
 
 .badge-banner {
-    display: flex;                    /* Row of badges */
-    flex-wrap: wrap;                  /* Wrap to next line if needed */
-    gap: 1.2rem;                      /* Space between badges */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 900px;                 /* Limit total row width for tidy look */
+    max-width: 900px;
 }
 
-/* Each badge is a circle-ish shield that can grow on hover */
+/* Each badge (container) */
 .badge {
-    position: relative;               /* Allows tooltip to position absolute inside badge */
-    width: 64px;                      /* Base badge size */
+    position: relative;
+    width: 64px;
     height: 64px;
     cursor: pointer;
-    transition: transform 0.18s;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
+    transition: z-index 0.15s;
 }
 
+/* Badge image */
 .badge img {
     max-width: 100%;
     max-height: 100%;
     display: block;
-    /* Clean, no border or background for transparent PNG look */
     transition: transform 0.20s cubic-bezier(.3,1.45,.48,1.13);
+    position: relative;
+    z-index: 2; /* Above the glow, but below neighboring badges unless hovered */
 }
 
-/* Grows the badge larger on hover (desktop) or tap (mobile) */
+/* Grow and bring badge in front on hover/focus/active */
+.badge:hover,
+.badge.active {
+    z-index: 10; /* On top of other badges */
+}
 .badge:hover img,
 .badge.active img {
-    transform: scale(2.5);           /* Increase this for even bigger pop! Still unsure how much pop is the right amount of pop... */
+    transform: scale(2.2); /* Increase for bigger pop */
 }
 
-/* Tooltip with golden semi-transparency, below badge */
-.badge-tooltip {
+/* Spinning glow effect behind hovered/active badge */
+.badge::before {
+    content: '';
     position: absolute;
-    top: 170%;                        /* Place tooltip *below* grown badge */
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255, 217, 0, 0.89); /* Golden, with a bit of transparency */
-    color: #473700;
-    font-size: 1em;
-    padding: 0.48rem 0.7rem;
-    border-radius: 4px;
-    max-width: 1000px;                 /* Wraps at this width */
-    min-width: 120px;
-    width: auto;                      /* Fit content */
-    box-shadow: 0 2px 16px #ffd70080, 0 0 0 2px #eac80d88;
-    opacity: 0;                       /* Hidden by default */
-    pointer-events: none;             /* Can't click unless visible */
-    transition: opacity 0.17s;
-    z-index: 5;                       /* Under badge image */
-    text-align: center;
-    word-break: normal;
+    width: 150%;
+    height: 150%;
+    transform: translate(-50%, -50%) scale(0.7);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    background: conic-gradient(from 0deg, #fffbe7 0deg 45deg, #ffe14c 135deg 180deg, #fffbe7 225deg 360deg);
+    box-shadow: 0 0 62px 32px rgba(255, 225, 76, 0.469), 0 0 0 0 #fff0;
+    transition: opacity 0.22s, transform 0.33s;
 }
 
-/* Tooltip is shown on hover (desktop) or tap (mobile) */
-.badge:hover .badge-tooltip,
-.badge.active .badge-tooltip {
+/* When hovered or active, show and spin the glow */
+.badge:hover::before,
+.badge.active::before {
     opacity: 1;
-    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1.18);
+    animation: spin-glow 2.8s linear infinite;
 }
 
-/* ---- Mobile tweaks for badges ---- */
+@keyframes spin-glow {
+    to {
+        transform: translate(-50%, -50%) scale(1.12) rotate(360deg);
+    }
+}
+
+/* ========== Responsive Styles for Badges ========== */
 @media (max-width: 600px) {
     .badge-banner-section {
         padding: 0.8rem 0;
     }
     .badge-banner {
-        gap: 0.7rem;                  /* Less gap on small screens */
+        gap: 0.7rem;
     }
     .badge {
-        width: 48px;                  /* Smaller badges */
+        width: 48px;
         height: 48px;
     }
-    .badge-tooltip {
-        font-size: 0.86em;            /* Slightly smaller text */
-        min-width: 70px;
+    .badge img {
+        /* Smaller on mobile, still grows on tap */
     }
 }
 
 /* ===================== ABOUT ME SECTION (Sand Bar) ===================== */
-/* Section with sand-colored bar and left-justified text. */
 .about-me-section {
-    width: 100vw;                        /* Full width */
+    width: 100vw;                        /* Whole screen width */
     margin: 0;
     padding: 0;
-    background: var(--gray15);           /* Page background */
+    background: var(--gray15);           /* Background matches page */
     display: flex;
     flex-direction: column;
-    align-items: flex-start;             /* Left-align for modern look */
+    align-items: flex-start;             /* Align items to left for modern look */
 }
 
-/* "ABOUT ME" heading just above sand bar */
+/* ABOUT ME heading (all-caps, sand, left-aligned, "touching" the bar) */
 .about-me-heading {
-    color: var(--sand);                  /* Matches sand bar */
+    color: var(--sand);                  /* Sand color for visual connection to bar */
     font-family: 'Raleway', sans-serif;
     font-size: 2.4rem;
     font-weight: 800;
     letter-spacing: 0.13em;
     margin: 0;
-    margin-top: 2.3rem;                  /* Space above heading */
-    margin-bottom: -0.7rem;              /* Pull heading to touch sand bar */
+    margin-top: 2.3rem;                  /* Space above */
+    margin-bottom: -0.7rem;              /* Pull heading down to "touch" bar */
     z-index: 2;
     text-align: left;
     background: none;
     position: relative;
     width: 100vw;
     max-width: 800px;
-    padding-left: 2rem;                  /* Left indent to match content */
+    padding-left: 2rem;                  /* Indent to match content below */
     box-sizing: border-box;
 }
 
-/* Main sand bar, ahhh, a sand bar. I miss swimming out to these. */
+/* The sand bar itself */
 .about-me-bar {
-    width: 100vw;
-    background: var(--sand);
-    padding: 2.2rem 0 2.2rem 0;          /* Top/bottom padding for chunkiness */
+    width: 100vw;                        /* Bar spans full width */
+    background: var(--sand);             /* Use sand color */
+    padding: 2.2rem 0 2.2rem 0;          /* Space above and below content */
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-start;         /* Left-align content */
     align-items: center;
-    border-radius: 0;
+    border-radius: 0;                    /* No roundness: modern and crisp */
     box-shadow: none;
     z-index: 1;
     margin: 0;
 }
 
-/* Content inside sand bar (text, left-justified) */
+/* Content inside the bar, left-aligned, readable */
 .about-me-content {
     width: 100%;
     max-width: 800px;
@@ -284,7 +310,7 @@ body {
 }
 
 .about-me-content p {
-    color: var(--pine);                  /* Use dark pine for contrast on sand */
+    color: var(--pine);                  /* Strong contrast for sand bar */
     line-height: 1.7;
     font-size: 1.13em;
     margin-bottom: 1.15em;
@@ -293,7 +319,7 @@ body {
 }
 
 /* ====================== MOBILE/RESPONSIVE SECTIONS ====================== */
-/* ---- Banner & About Me mobile tweaks ---- */
+/* ---- BANNER mobile styles ---- */
 @media (max-width: 900px) {
     .banner-text {
         right: 5vw;
@@ -301,13 +327,13 @@ body {
         font-size: 0.93em;
     }
     .banner {
-        height: 220px;                   /* Shorter for tablet screens */
+        height: 220px;                   /* Shorter banner on tablets */
     }
 }
-/* ---- About Me + Banner mobile tweaks ---- */
+/* ---- MOBILE styles for banner and about me ---- */
 @media (max-width: 600px) {
     .banner {
-        height: 180px;                   /* Smaller banner for mobile */
+        height: 180px;                   /* Short banner on mobile */
     }
     .banner-text {
         right: 2vw;
@@ -317,19 +343,19 @@ body {
     .banner-text h1 {
         font-size: 1.3em;
     }
-    /* About Me section on mobile: smaller text, less spacing, more fluid width */
+    /* About Me section on mobile */
     .about-me-heading,
     .about-me-content {
-        padding-left: 0.7rem;
+        padding-left: 0.7rem;            /* Less padding on mobile */
         padding-right: 0.7rem;
-        max-width: 98vw;
+        max-width: 98vw;                 /* Don't exceed viewport width */
     }
     .about-me-heading {
-        font-size: 1.3rem;
+        font-size: 1.3rem;               /* Smaller heading on mobile */
         margin-top: 1.1rem;
-        margin-bottom: -0.3rem;      /* Perfect flush with bar for mobile, this took a while to determine... */
+        margin-bottom: -0.3rem;          /* Make ABOUT ME "touch" sand bar */
     }
     .about-me-bar {
-        padding: 1.1rem 0;
+        padding: 1.1rem 0;               /* Less vertical space on mobile */
     }
 }
